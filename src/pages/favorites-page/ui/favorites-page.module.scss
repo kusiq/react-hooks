@@ -1,0 +1,46 @@
+@use '../../../shared/styles/mixins' as *;
+
+.page {
+  display: grid;
+  gap: 28px;
+}
+
+.hero {
+  @include surface-card;
+
+  display: grid;
+  gap: 12px;
+  padding: clamp(24px, 4vw, 34px);
+}
+
+.eyebrow {
+  font-family: var(--font-mono);
+  font-size: 0.76rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+}
+
+.title {
+  max-width: 15ch;
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  line-height: 0.98;
+}
+
+.description {
+  max-width: 58ch;
+  color: var(--color-text-muted);
+  line-height: 1.7;
+}
+
+.actionButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+  padding-inline: 16px;
+  border: none;
+  border-radius: 999px;
+  background: var(--color-text);
+  color: white;
+}

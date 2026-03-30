@@ -1,0 +1,14 @@
+.page {
+  padding-top: 48px;
+}
+
+.link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+  padding-inline: 16px;
+  border-radius: 999px;
+  background: var(--color-text);
+  color: white;
+}

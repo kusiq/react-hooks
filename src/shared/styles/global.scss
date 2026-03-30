@@ -1,0 +1,48 @@
+@use './tokens';
+@use './reset';
+@use './mixins' as *;
+
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap');
+
+body {
+  font-family: var(--font-sans);
+  color: var(--color-text);
+  background:
+    radial-gradient(
+      circle at top left,
+      rgba(15, 118, 110, 0.14),
+      transparent 32%
+    ),
+    radial-gradient(
+      circle at top right,
+      rgba(15, 23, 42, 0.08),
+      transparent 28%
+    ),
+    linear-gradient(180deg, #f7f8fb 0%, #edf2f7 100%);
+}
+
+#root {
+  min-height: 100vh;
+}
+
+main {
+  display: block;
+}
+
+button,
+input,
+select {
+  transition:
+    border-color var(--transition-base),
+    background-color var(--transition-base),
+    color var(--transition-base),
+    transform var(--transition-base),
+    box-shadow var(--transition-base);
+}
+
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+a:focus-visible {
+  @include focus-ring;
+}
