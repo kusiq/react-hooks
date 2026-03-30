@@ -4,7 +4,10 @@
   @include surface-card;
 
   display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  grid-template-rows: auto 1fr;
   min-height: 100%;
+  min-width: 0;
   overflow: hidden;
   box-shadow: var(--shadow-soft);
 }
@@ -26,7 +29,10 @@
 
 .body {
   display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  grid-template-rows: auto 1fr auto;
   gap: 18px;
+  min-width: 0;
   padding: 20px;
 }
 
@@ -35,13 +41,18 @@
   align-items: center;
   justify-content: space-between;
   gap: 12px;
+  min-width: 0;
 }
 
 .category {
+  min-width: 0;
+  overflow: hidden;
   font-family: var(--font-mono);
   font-size: 0.72rem;
   letter-spacing: 0.14em;
+  text-overflow: ellipsis;
   text-transform: uppercase;
+  white-space: nowrap;
   color: var(--color-text-muted);
 }
 
@@ -54,9 +65,11 @@
 
 .favoriteButton,
 .favoriteActive {
+  flex-shrink: 0;
   min-height: 34px;
   padding-inline: 12px;
   font-size: 0.82rem;
+  white-space: nowrap;
 }
 
 .favoriteButton {
@@ -71,28 +84,35 @@
 
 .copy {
   display: grid;
+  grid-template-columns: minmax(0, 1fr);
   gap: 10px;
+  min-width: 0;
 }
 
 .title {
   font-size: 1.32rem;
   line-height: 1.1;
+  overflow-wrap: anywhere;
 }
 
 .description {
   color: var(--color-text-muted);
   line-height: 1.6;
+  overflow-wrap: anywhere;
 }
 
 .footer {
   display: grid;
+  grid-template-columns: minmax(0, 1fr);
   gap: 14px;
+  min-width: 0;
 }
 
 .metrics {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
+  min-width: 0;
   color: var(--color-text-muted);
 }
 
